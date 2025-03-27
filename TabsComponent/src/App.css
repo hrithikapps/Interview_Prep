@@ -1,0 +1,12 @@
+.tab_header {
+  width: 5rem;
+  padding: 0 20px;
+}
+
+.tab_content {
+  border: 1px solid black;
+  height: 20rem;
+  width: 20rem;
+  text-align: center;
+  align-content: center;
+}
