@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import OtpPage from "./components/OtpPage";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <OtpPage />
+    </div>
+  );
+};
 
-export default App
+export default App;
