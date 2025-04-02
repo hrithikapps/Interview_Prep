@@ -22,6 +22,15 @@ const OtpPage = ({ otpLength = 6 }) => {
       setOtpFields(newOtpFileds);
       return;
     }
+    if (key == "ArrowRight") {
+      if (index + 1 < otpFields.length) ref.current[index + 1].focus();
+      return;
+    }
+    if (key == "ArrowLeft") {
+      if (index - 1 >= 0) ref.current[index - 1].focus();
+      return;
+    }
+
     if (isNaN(key)) return;
 
     newOtpFileds[index] = key;
@@ -40,6 +49,9 @@ const OtpPage = ({ otpLength = 6 }) => {
             key={index}
             type="text"
             value={values}
+            onChange={() => {}}
+            aria-label={`Digit ${index + 1}`}
+            aria-describedby="otp-instructions"
             ref={(currentInput) => (ref.current[index] = currentInput)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           />
