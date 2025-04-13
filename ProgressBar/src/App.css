@@ -1,0 +1,12 @@
+.outer {
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.inner {
+  background-color: green;
+  transform: translateX(-30%);
+  text-align: right;
+  transition: transform 0.3s ease-in;
+}
